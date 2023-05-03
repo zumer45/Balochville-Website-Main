@@ -94,6 +94,28 @@ a:hover {
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
+  animation: rotate-colors 20s infinite linear;
+}
+
+@keyframes rotate-colors {
+  0% {
+    color: #FFB6C1; /* Light pink */
+  }
+  20% {
+    color: #FFD700; /* Gold */
+  }
+  40% {
+    color: #00FF00; /* Lime */
+  }
+  60% {
+    color: #1E90FF; /* Dodger blue */
+  }
+  80% {
+    color: #FF8C00; /* Dark orange */
+  }
+  100% {
+    color: #FF1493; /* Deep pink */
+  }
 }
 
 .navbar-links {
