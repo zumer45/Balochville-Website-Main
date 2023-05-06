@@ -40,12 +40,6 @@ function init() {
   }
 }
 
-// function hamburgerMenuShown() {
-//     if (!hamburgerMenuIcon) {
-//         hamburgerMenu.style.display = 'flex';
-//     }
-// }
 
-console.log(e.target)
 
 init();
