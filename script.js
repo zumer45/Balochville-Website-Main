@@ -4,13 +4,16 @@ const mainHeading = document.querySelector('.main-heading');
 const mainParagraph = document.querySelector('.main-paragraph');
 const footer = document.querySelector('.footer');
 const hamburgerMenu = document.querySelector('#navbar-toggle')
-
-
-
+const currentYear = document.querySelector('#current-year')
 
 const globalVariables = {
   currentPage: typeof window !== 'undefined' ? window.location.pathname : null,
 };
+
+function UpdateCurrentYear () {
+    currentYear.textContent = new Date().getFullYear();
+    console.log(currentYear.textContent);
+}
 
 function whenAnimationOver() {
   if (mainParagraph.style.display === 'none' && footer.style.display === 'none' && globalVariables.currentPage === '/index.html') {
@@ -42,4 +45,10 @@ function init() {
 
 
 
+
+
+
+UpdateCurrentYear();
 init();
+
+

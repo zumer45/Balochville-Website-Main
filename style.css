@@ -129,22 +129,38 @@ a {
   0% {
     color: #FFB6C1; /* Light pink */
   }
+  10% {
+    color: #FFC1B6; /* Pink */
+  }
   20% {
     color: #FFD700; /* Gold */
+  }
+  30% {
+    color: #9ACD32; /* Yellow green */
   }
   40% {
     color: #00FF00; /* Lime */
   }
+  50% {
+    color: #87CEEB; /* Sky blue */
+  }
   60% {
     color: #1E90FF; /* Dodger blue */
   }
+  70% {
+    color: #FFA500; /* Orange */
+  }
   80% {
     color: #FF8C00; /* Dark orange */
+  }
+  90% {
+    color: #FF69B4; /* Hot pink */
   }
   100% {
     color: #FF1493; /* Deep pink */
   }
 }
+
 
 .navbar-links {
   display: flex;
@@ -269,24 +285,60 @@ a {
 }
 
 .footer-text {
-  font-size: 1.3rem;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Cubano, Poppins, serif;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  animation: rotate-colors 15s infinite ease-out;
+}
+
+.creator-info {
+  list-style-type: none;
   margin-top: 1rem;
+  text-align: center;
+}
+
+.creator-info li:first-child {
+  font-size: 1.2rem;
+  color: var(--yellow-color);
+  font-weight: bold;
+}
+
+.creator-info li:last-child {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+
+
+
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.video-container .center {
+  text-align: center;
+  
+}
+
+iframe {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  height: 315px;
+  width: 90%;
+  max-width: 600px;
   display: flex;
   align-items: center;
-  font-family: cubano, Poppins, serif;
+  justify-content: center;
+  border: none;
+  border-radius: 1rem;
 }
-
-.footer-text p {
-  margin: 0;
-  color: var(--yellow-color)
-}
-
-.footer-text:before {
-  content: "\00a9";
-  margin-right: 0.5rem;
-}
-
 
 @media screen and (max-width: 768px) {
   .navbar-links {
@@ -295,10 +347,15 @@ a {
   #hamburger {
     display: block;
 }
+.navbar-link {
+  display: none;
+}
 
+}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 414px) {
   body {
-    width: 90%;
+    width: 20%;
+    background-color: red;
   }
 }
