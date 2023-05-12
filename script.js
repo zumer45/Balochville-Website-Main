@@ -1,37 +1,42 @@
 // Getting DOM Elements
-const mainSection = document.querySelector('.main-section');
-const mainHeading = document.querySelector('.main-heading');
-const mainParagraph = document.querySelector('.main-paragraph');
-const footer = document.querySelector('.footer');
-const hamburgerMenu = document.querySelector('#navbar-toggle')
-const currentYear = document.querySelector('#current-year')
+const elements = {
+  mainSection: document.querySelector('.main-section'),
+  mainHeading: document.querySelector('.main-heading'),
+  mainParagraph: document.querySelector('.main-paragraph'),
+  footer: document.querySelector('.footer'),
+  hamburgerMenu: document.querySelector('#hamburger'),
+  currentYear: document.querySelector('#current-year'),
+};
 
 const globalVariables = {
   currentPage: typeof window !== 'undefined' ? window.location.pathname : null,
 };
 
-function UpdateCurrentYear () {
-    currentYear.textContent = new Date().getFullYear();
-    console.log(currentYear.textContent);
+// Helper function to update the current year
+function updateCurrentYear() {
+  elements.currentYear.textContent = new Date().getFullYear();
+  console.log(elements.currentYear.textContent);
 }
 
-function whenAnimationOver() {
-  if (mainParagraph.style.display === 'none' && footer.style.display === 'none' && globalVariables.currentPage === '/index.html') {
-    mainParagraph.style.display = 'flex';
-    mainParagraph.style.animation = 'fade-in 5s ease-in-out forwards';
-    footer.style.display = 'flex';
-    footer.style.animation = 'fade-in 7s ease-in-out forwards';
-    mainSection.removeEventListener('animationend', whenAnimationOver);
+// Helper function to handle animation end event
+function handleAnimationEnd() {
+  if (elements.mainParagraph.style.display === 'none' && elements.footer.style.display === 'none') {
+    elements.mainParagraph.style.display = 'flex';
+    elements.mainParagraph.style.animation = 'fade-in 5s ease-in-out forwards';
+    elements.footer.style.display = 'flex';
+    elements.footer.style.animation = 'fade-in 7s ease-in-out forwards';
+    elements.mainSection.removeEventListener('animationend', handleAnimationEnd);
   }
 }
 
-function init() {
+// Function to initialize the page
+function initializePage() {
   switch (globalVariables.currentPage) {
     case '/':
     case '/index.html':
-      mainParagraph.style.display = 'none';
-      footer.style.display = 'none';
-      mainSection.addEventListener('animationend', whenAnimationOver);
+      elements.mainParagraph.style.display = 'none';
+      elements.footer.style.display = 'none';
+      elements.mainSection.addEventListener('animationend', handleAnimationEnd);
       console.log('Index');
       break;
     case '/about.html':
@@ -43,12 +48,6 @@ function init() {
   }
 }
 
-
-
-
-
-
-UpdateCurrentYear();
-init();
-
-
+// Initiate the page
+updateCurrentYear();
+initializePage();
