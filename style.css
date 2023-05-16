@@ -296,6 +296,7 @@ a {
   list-style-type: none;
   margin-top: 1rem;
   text-align: center;
+  
 }
 
 .creator-info li:first-child {
@@ -305,8 +306,10 @@ a {
 }
 
 .creator-info li:last-child {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--white);
+  font-family: Cubano, Poppins, sans-serif;
+
 }
 
 .video-container {
@@ -330,7 +333,7 @@ iframe {
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 1rem;
+  border-radius: 1rem; 
 }
 
 @media screen and (max-width: 768px) {
@@ -359,7 +362,7 @@ iframe {
   .footer-link {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* To align items centrally */
+    justify-content: center;
   }
 
 }
