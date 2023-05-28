@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 :root {
   --main-color: #121212;
   --yellow-color: #ffd600;
@@ -16,7 +16,7 @@ body {
   font-family: Poppins, serif;
   font-size: 16px;
   line-height: 1.5;
-  max-width: 100vw
+  max-width: 100vw;
 }
 
 .main-section {
@@ -24,18 +24,16 @@ body {
   margin: 10rem auto 0;
   font-size: 1.6rem;
   color: var(--white);
-  
 }
 
- .main-section h2 {
-  font-size: 3.0rem;
+.main-section h2 {
+  font-size: 3rem;
   margin-bottom: 4rem;
- }
-
+}
 
 .main-heading {
-  opacity: 0; 
-  transform: translateX(-100%); 
+  opacity: 0;
+  transform: translateX(-100%);
   animation: slide-in 1s ease-in-out forwards; /* Start the slide-in animation */
 }
 
@@ -49,7 +47,6 @@ body {
     transform: translateX(0); /* End the element at its original position */
   }
 }
-
 
 @keyframes fade-in {
   0% {
@@ -66,10 +63,9 @@ body {
   height: 7rem;
   width: 7rem;
   vertical-align: middle;
-  
 }
 
-.grow  {
+.grow {
   transition: 1s ease;
 }
 
@@ -89,7 +85,6 @@ a {
   font-family: Cubano, Poppins;
   color: var(--yellow-color);
   font-size: 3.5rem;
-  
 }
 
 .navbar {
@@ -99,7 +94,6 @@ a {
   background-color: var(--main-color);
   padding: 1rem 2rem;
   font-family: cubano;
-  p
 }
 
 .navbar-logo {
@@ -127,37 +121,37 @@ a {
 
 @keyframes rotate-colors {
   0% {
-    color: #FFB6C1; /* Light pink */
+    color: #ffb6c1; /* Light pink */
   }
   10% {
-    color: #FFC1B6; /* Pink */
+    color: #ffc1b6; /* Pink */
   }
   20% {
-    color: #FFD700; /* Gold */
+    color: #ffd700; /* Gold */
   }
   30% {
-    color: #9ACD32; /* Yellow green */
+    color: #9acd32; /* Yellow green */
   }
   40% {
-    color: #00FF00; /* Lime */
+    color: #00ff00; /* Lime */
   }
   50% {
-    color: #87CEEB; /* Sky blue */
+    color: #87ceeb; /* Sky blue */
   }
   60% {
-    color: #1E90FF; /* Dodger blue */
+    color: #1e90ff; /* Dodger blue */
   }
   70% {
-    color: #FFA500; /* Orange */
+    color: #ffa500; /* Orange */
   }
   80% {
-    color: #FF8C00; /* Dark orange */
+    color: #ff8c00; /* Dark orange */
   }
   90% {
-    color: #FF69B4; /* Hot pink */
+    color: #ff69b4; /* Hot pink */
   }
   100% {
-    color: #FF1493; /* Deep pink */
+    color: #ff1493; /* Deep pink */
   }
 }
 .navbar-links {
@@ -185,32 +179,31 @@ a {
 .navbar-link a:hover {
   background-color: var(--yellow-color);
   color: var(--main-color);
-  transform: scale(1.2)
-  
+  transform: scale(1.2);
 }
-  .navbar-menu-icon {
-    display: block;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-    margin-right: 1rem;
-  }
+.navbar-menu-icon {
+  display: block;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
 
-  .navbar-menu {
-    display: none;
-    position: absolute;
-    top: 4rem;
-    right: 2rem;
-    background-color: var(--main-color);
-    padding: 1rem;
-    border-radius: 1rem;
-  }
+.navbar-menu {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  background-color: var(--main-color);
+  padding: 1rem;
+  border-radius: 1rem;
+}
 
-  .navbar-menu a {
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
+.navbar-menu a {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
 
 #hamburger {
   font-size: 1.8rem;
@@ -251,25 +244,32 @@ a {
 }
 
 .facebook:hover {
-  color: #4267B2;
+  color: #4267b2;
 }
 
 .youtube:hover {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .instagram:hover {
-  background-image: linear-gradient(to right, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-image: linear-gradient(
+    to right,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .twitter:hover {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 .mail:hover {
-  color: #D44638;
+  color: #d44638;
 }
 
 .footer {
@@ -296,7 +296,6 @@ a {
   list-style-type: none;
   margin-top: 1rem;
   text-align: center;
-  
 }
 
 .creator-info li:first-child {
@@ -309,7 +308,6 @@ a {
   font-size: 1rem;
   color: var(--white);
   font-family: Cubano, Poppins, sans-serif;
-
 }
 
 .video-container {
@@ -317,7 +315,6 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 .video-container .center {
   text-align: center;
@@ -333,7 +330,7 @@ iframe {
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 1rem; 
+  border-radius: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -342,10 +339,10 @@ iframe {
   }
   #hamburger {
     display: block;
-}
+  }
   .navbar-link {
     display: none;
-} 
+  }
   body {
     display: flex;
     flex-direction: column;
@@ -353,23 +350,16 @@ iframe {
     justify-content: center;
   }
 
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-  
-  } 
-
   .footer-link {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-
 }
 
 @media screen and (max-width: 414px) {
   body {
-    width: 20%;
+    width: 80%;
     background-color: red;
   }
 }
