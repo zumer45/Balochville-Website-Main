@@ -6,9 +6,12 @@ const elements = {
   footer: document.querySelector(".footer"),
   hamburgerMenu: document.querySelector("#hamburger"),
   currentYear: document.querySelector("#current-year"),
+<<<<<<< HEAD
   icons: document.querySelectorAll(".footer-link"),
   navBarToggle: document.getElementById("navbar-toggle"),
   navbarLinks: document.getElementById("navbar-links"),
+=======
+>>>>>>> 971340057a1caeb70a5d692102acfb851b9457d4
 };
 
 function checkIconsIfHovered(e) {
@@ -36,7 +39,11 @@ function handleAnimationEnd() {
     elements.footer.style.animation = "fade-in 7s ease-in-out forwards";
     elements.mainSection.removeEventListener(
       "animationend",
+<<<<<<< HEAD
       handleAnimationEnd
+=======
+      handleAnimationEnd()
+>>>>>>> 971340057a1caeb70a5d692102acfb851b9457d4
     );
   }
 }
@@ -49,6 +56,7 @@ function initializePage() {
       elements.mainParagraph.style.display = "none";
       elements.footer.style.display = "none";
       elements.mainSection.addEventListener("animationend", handleAnimationEnd);
+<<<<<<< HEAD
       elements.icons.forEach((icon) =>
         icon.addEventListener("mouseenter", checkIconsIfHovered)
       );
@@ -62,6 +70,15 @@ function initializePage() {
       elements.icons.forEach((icon) =>
         icon.addEventListener("mouseenter", checkIconsIfHovered)
       );
+=======
+      console.log("Index");
+      break;
+    case "/about.html":
+      console.log("About");
+      break;
+    case "/videos.html":
+      console.log("Videos");
+>>>>>>> 971340057a1caeb70a5d692102acfb851b9457d4
       break;
   }
 }
